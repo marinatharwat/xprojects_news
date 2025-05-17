@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:xprojects_news/ui/screens/bookmark_screen/screens/bookmark_screen.dart';
 import 'package:xprojects_news/ui/screens/home_screen/screens/home_screen.dart';
@@ -19,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     const BookMarkScreen(),
      const SearchScreen(),
-    const Center(child: Text('Notifications')),
+     Center(child: Text('notifications'.tr())),
     const SettingsScreen(),
   ];
   @override

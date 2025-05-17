@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:xprojects_news/core/data/model/responses/news/article.dart';
@@ -71,12 +72,12 @@ class _CustomBottomDetailsState extends State<CustomBottomDetails> {
                 if (isBookmarked) {
                   await BookmarkService().removeNews(widget.newsArticle.title);
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text("Removed!")),
+                     SnackBar(content: Text("removed".tr())),
                   );
                 } else {
                   await BookmarkService().saveNews(widget.newsArticle);
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text("Saved!")),
+                     SnackBar(content: Text("saved".tr())),
                   );
                 }
 

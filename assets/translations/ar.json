@@ -2,12 +2,18 @@
   "news": "تطبيق",
   "app": "الاخبار",
   "collections": "المجموعات",
-  "latest_bookmarks": "المجموعات",
+  "latest_bookmarks": "أحدث الإشارات المرجعية",
   "no_news_saved": "لم يتم حفظ أي أخبار",
   "settings": "إعدادات",
   "language": "لغة",
   "search": "بحث",
-  "latest_news": "أحدث الأخبار"
+  "latest_news": "أحدث الأخبار",
+  "news_search": " من الاخبار",
+  "start_searching": "ابدأ البحث",
+  "notifications": "الاشعارات",
+  "news_removed": "تمت إزالة الخبر",
+  "removed": "تمت إزالته",
+  "saved": "تم الحفظ"
 
 
 

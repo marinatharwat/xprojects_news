@@ -8,6 +8,7 @@ import 'package:xprojects_news/core/utils/common_functions.dart';
 import 'package:xprojects_news/ui/screens/no_internet_screen/no_internet_screen.dart';
 import 'package:xprojects_news/ui/screens/search_screen/cubit/search_cubit.dart';
 import 'package:xprojects_news/ui/screens/search_screen/cubit/search_state.dart';
+
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
 
@@ -55,9 +56,10 @@ class _SearchScreenState extends State<SearchScreen> {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                 decoration: BoxDecoration(
-                  color:AppColors.searchColor,
+                  color: AppColors.searchColor,
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: Row(
@@ -66,7 +68,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       child: TextField(
                         controller: _searchController,
                         style: const TextStyle(color: AppColors.white),
-                        decoration:  InputDecoration(
+                        decoration: InputDecoration(
                           hintText: "search".tr(),
                           hintStyle: const TextStyle(color: AppColors.white),
                           border: InputBorder.none,
@@ -128,7 +130,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           child: Row(
                             children: [
                               Text(
-                                "${news.length} News",
+                                "${news.length} ${'news_search'.tr()}",
                                 style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
@@ -140,62 +142,63 @@ class _SearchScreenState extends State<SearchScreen> {
                           ),
                         ),
                         ...news.map((article) => Padding(
-                          padding: const EdgeInsets.only(bottom: 16),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(8),
-                                child: Image.network(
-                                  article.urlToImage ?? '',
-                                  width: 80,
-                                  height: 80,
-                                  fit: BoxFit.cover,
-                                  errorBuilder: (_, __, ___) => Container(
-                                    width: 80,
-                                    height: 80,
-                                    color: Colors.grey[300],
-                                    child: const Icon(Icons.broken_image),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(width: 12),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      article.title,
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w600,
+                              padding: const EdgeInsets.only(bottom: 16),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: Image.network(
+                                      article.urlToImage ?? '',
+                                      width: 80,
+                                      height: 80,
+                                      fit: BoxFit.cover,
+                                      errorBuilder: (_, __, ___) => Container(
+                                        width: 80,
+                                        height: 80,
+                                        color: Colors.grey[300],
+                                        child: const Icon(Icons.broken_image),
                                       ),
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
                                     ),
-                                    if (article.content != null)
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.only(top: 4),
-                                        child: Text(
-                                          article.content!,
-                                          style: TextStyle(
-                                            color: Colors.grey[600],
-                                            fontSize: 13,
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          article.title,
+                                          style: const TextStyle(
+                                            fontWeight: FontWeight.w600,
                                           ),
                                           maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                         ),
-                                      ),
-                                  ],
-                                ),
+                                        if (article.content != null)
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 4),
+                                            child: Text(
+                                              article.content!,
+                                              style: TextStyle(
+                                                color: Colors.grey[600],
+                                                fontSize: 13,
+                                              ),
+                                              maxLines: 2,
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                          ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        )),
+                            )),
                       ],
                     );
                   }
-                  return const Center(child: Text("Start searching"));
+                  return  Center(child: Text("start_searching".tr()));
                 },
               ),
             ),

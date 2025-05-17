@@ -96,7 +96,7 @@ class BookMarkScreenState extends State<BookMarkScreen> {
                         onDismissed: (_) {
                           removeArticle(i);
                           ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text('News removed')));
+                               SnackBar(content: Text('news_removed'.tr())));
                         },
                         background: Container(
                           padding: EdgeInsets.symmetric(horizontal: w * 0.05),

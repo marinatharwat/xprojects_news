@@ -7,5 +7,11 @@
   "settings": "Settings",
    "language": "Language",
   "search": "Search",
-  "latest_news": "latest news"
+  "latest_news": "latest news",
+  "news_search": "news",
+  "start_searching": "Start Searching",
+  "notifications": "Notifications",
+  "news_removed": "News Removed",
+  "removed": "Removed",
+  "saved": "Saved"
 }
