@@ -19,18 +19,6 @@ class SettingsProvider extends ChangeNotifier {
     });
   }
 
-  Future<bool> saveAppSettings(AppSettings newAppSettings) async {
-    try {
-      final prefs = inject<SharedPreferences>();
-      await prefs.setBool('isDark', newAppSettings.isDark);
-      await prefs.setString('locale', newAppSettings.locale);
-      appSettings.value = newAppSettings;
-      notifyListeners();
-      return true;
-    } catch (_) {
-      return false;
-    }
-  }
 
   void changeLocale(BuildContext context, String newLocale) {
     _preference.saveLocale(newLocale);

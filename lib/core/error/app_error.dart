@@ -17,7 +17,7 @@ class AppError {
 
   factory AppError.fromJson(Map<String, dynamic> json) {
     return AppError(
-      message: json['message'] ?? 'Unknown Error', // إذا لم تكن الرسالة موجودة في الـ JSON
+      message: json['message'] ?? 'Unknown Error',
       type: ErrorType.values.firstWhere(
             (e) => e.toString() == 'ErrorType.${json['type']}',
         orElse: () => ErrorType.unknown,

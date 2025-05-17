@@ -17,7 +17,7 @@ void main() async {
 
   final preference = inject<Preference>();
   final savedLocale =
-      Locale(preference.locale.value ?? 'en'); // استرجاع اللغة المحفوظة
+      Locale(preference.locale.value ?? 'en');
 
   runApp(
     EasyLocalization(
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<ValueNotifier<AppSettings>>(
           create: (_) => inject<ValueNotifier<AppSettings>>(),
         ),
-        BlocProvider<SearchCubit>(create: (_) => SearchCubit()), // ✅ أضف هذا السطر
+        BlocProvider<SearchCubit>(create: (_) => SearchCubit()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

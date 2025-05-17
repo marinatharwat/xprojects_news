@@ -12,7 +12,7 @@ abstract class Failure extends Equatable {
   bool get isInternet => this is InternetFailure;
   bool get isNoContent => this is NoContentFailure;
   bool get isNotAuthorized => this is NotAuthorizedFailure;
-  bool get isInternetFailure => this is InternetFailure; // هنا أضفنا الـ getter
+  bool get isInternetFailure => this is InternetFailure;
 
 }
 

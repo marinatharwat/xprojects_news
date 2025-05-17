@@ -18,7 +18,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _screens = [
     const HomeScreen(),
     const BookMarkScreen(),
-     SearchScreen(),
+     const SearchScreen(),
     const Center(child: Text('Notifications')),
     const SettingsScreen(),
   ];
